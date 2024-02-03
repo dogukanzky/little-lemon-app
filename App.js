@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { Text, View } from "react-native";
+import LemonHeader from "./src/components/LemonHeader";
+import LemonFooter from "./src/components/LemonFooter";
+import WelcomeScreen from "./src/components/WelcomeScreen";
+import LoginScreen from "./src/components/LoginScreen";
+import MainPage from "./src/components/MainPage";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View className="bg-white flex-1 ">
+      <LemonHeader />
+      <MainPage />
+      {/* <WelcomeScreen />
+      <LoginScreen /> */}
+      <LemonFooter />
       <StatusBar style="auto" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
