@@ -6,16 +6,19 @@ import LemonFooter from "./src/components/LemonFooter";
 import WelcomeScreen from "./src/components/WelcomeScreen";
 import LoginScreen from "./src/components/LoginScreen";
 import MainPage from "./src/components/MainPage";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   return (
-    <View className="bg-white flex-1 ">
-      <LemonHeader />
-      <MainPage />
-      {/* <WelcomeScreen />
+    <NavigationContainer>
+      <View className="bg-white flex-1 ">
+        <LemonHeader />
+        <MainPage />
+        {/* <WelcomeScreen />
       <LoginScreen /> */}
-      <LemonFooter />
-      <StatusBar style="auto" />
-    </View>
+        <LemonFooter />
+        <StatusBar style="auto" />
+      </View>
+    </NavigationContainer>
   );
 }
