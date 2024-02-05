@@ -8,4 +8,8 @@ Little Lemon Restaurant App features 3 screens:
 
 [Download the app on your phone](https://expo.dev/accounts/dgknzky/projects/dogukan-restourant/builds/2c5832a4-aa9d-4e54-b73b-5ff2e7e9867c)
 
-In the development of the app, Tailwind and NativeWind CSS frameworks have been utilized.
+In the development of the app, Tailwind, and NativeWind CSS frameworks have been utilized and 2 navigation systems is used: 
+
+1. **Stack Navigator**: The main page is navigated in a stack login.
+2. **Bottom Tab Navigator**: The bottom tab navigator has 3 screens inside to navigate.
+
