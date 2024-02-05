@@ -1,12 +1,11 @@
 import { useState } from "react";
 import {
   Text,
-  TextInput,
   View,
   SectionList,
-  ScrollView,
-  KeyboardAvoidingView,
-  Platform
+  Platform,
+  Pressable,
+  Linking
 } from "react-native";
 
 const menuItemsToDisplay = [
@@ -66,26 +65,50 @@ const menuItemsToDisplay = [
 function Item({ name, price }) {
   return (
     <View className="flex-row justify-around px-5 py-3">
-      <Text className="text-2xl text-[#F4CE14]">{name}</Text>
-      <Text className="text-2xl text-[#F4CE14]">{price}</Text>
+      <Text className="text-2xl text-[#dacd10]">{name}</Text>
+      <Text className="text-2xl text-[#dacd10]">{price}</Text>
     </View>
   );
 }
 
-const Seperator = () => <View className="bg-[#ffffff] h-1 w-full"></View>;
+const Seperator = () => <View className="bg-[#ffffff] h-0.5 w-full"></View>;
 
 const Header = () => (
-  <Text className="text-4xl text-center flex-wrap">Our Beautiful Menu</Text>
-);
-const Footer = () => (
-  <Text className="text-4xl text-center flex-wrap">This is Footer</Text>
+  <Text className="text-4xl text-center flex-wrap text-white">
+    Our Beautiful Menu
+  </Text>
 );
 
-export default function WelcomeScreen() {
+const makeDial = () => {
+  let phoneNum;
+  if (Platform.OS === "android") {
+    phoneNum = "tel:+905303118714";
+  } else {
+    phoneNum = "telprompt:+905303118714";
+  }
+  try {
+    Linking.openURL(phoneNum);
+  } catch (e) {
+    console.log("Error", e);
+  }
+};
+export default function WelcomeScreen({ navigation }) {
   const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
   const renderSectionHeader = ({ section: { title } }) => (
-    <Text className="text-4xl text-center bg-[#EE9972] flex-wrap">{title}</Text>
+    <Text className="text-4xl text-center bg-[#dacd10] flex-wrap">{title}</Text>
   );
+
+  const Footer = () => (
+    <Pressable
+      className="flex w-2/3 sm:w-1/3 h-10 bg-[#dacd10] rounded-xl justify-center items-center align-middle mt-5 ml-auto mr-auto"
+      onPress={makeDial}
+    >
+      <Text className="text-4xl text-center flex-wrap text-white">
+        Order Now!
+      </Text>
+    </Pressable>
+  );
+
   return (
     <View className="bg-[#333333] flex-1 justify-center items-center">
       <SectionList

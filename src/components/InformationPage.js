@@ -52,7 +52,7 @@ export default function InformationPage({ navigation }) {
           }}
           className="w-1/3 sm:w-1/3 h-10 bg-[#dacd10] rounded-3xl justify-center items-center "
         >
-          <Text className="text-white text-center text-2xl "> Go Back</Text>
+          <Text className="text-white text-center text-2xl "> Log Out!</Text>
         </Pressable>
       </View>
     </ScrollView>

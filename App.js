@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Text, View, Image } from "react-native";
+import { Text, View, Image,SafeAreaView } from "react-native";
 import LemonHeader from "./src/components/LemonHeader";
 import LemonFooter from "./src/components/LemonFooter";
 import WelcomeScreen from "./src/components/MenuPage";
@@ -57,7 +57,7 @@ export default function App() {
             component={MainPage}
           />
         </Stack.Navigator>
-        <LemonFooter />
+        {/* <LemonFooter /> */}
       </View>
     </NavigationContainer>
   );
