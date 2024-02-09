@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "ReactNativeTutorial",
-    "slug": "ReactNativeTutorial",
+    "slug": "dogukan-restourant",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.dgknzky.dogukanrestourant"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6632c4d9-56c9-454c-8526-488e14983256"
+      }
+    },
+    "owner": "dgknzky"
   }
 }
